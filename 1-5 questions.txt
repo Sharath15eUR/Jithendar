@@ -1,0 +1,16 @@
+1.
+  1.SIGINT
+  2.SIGTERM,SIGKILL
+  3.SIGILL
+  4.SIGSEGV(segmentation violation)
+2.
+  5.run [arglist]
+  6.break[line]
+  7.c(continue)
+  8.clear
+  9.bt(backtrace)
+
+
+3. 2 will be printed 5 times
+
+4.output will be 234 4
