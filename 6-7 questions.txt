@@ -1,0 +1,19 @@
+6.
+ race condition occurs when multiple threads access shared resource concurrently
+dead locks occurs when multiple threads are blocked indefinetly(same thread is trying to 
+lock the mutex again)
+ this two can be avoided by mimizing the shared resource
+ by using proper lock and unlock of mutex
+ by avoiding nested locks
+
+7.fork() creates a new process by duplicating the existing process. Both the parent and 
+child processes continue executing from the point of the fork() call. After fork(),
+the parent and child processes have separate memory spaces but share the same code, data, 
+and open file descriptors.
+exec() functions replace the current process's memory space with a new program.
+Unlike fork(), exec() doesn't create a new process instead, it transforms 
+the existing process into a different one.
+
+8.thread is a buildinf block of process, each thread do's individual task
+where as process is a building block of a program
+
