@@ -1,0 +1,41 @@
+1. CONNECTION PROCEDURE
+Socket Creation:
+Both the client and server create communication endpoints known as sockets. 
+These sockets are associated with specific IP addresses and port numbers.
+
+Server Binding:
+The server binds its socket to a specific IP address and port number using the bind() system call. T
+his informs the operating system that the server is ready to accept connections on that particular address and port.
+
+Listening for Connections:
+The server calls the listen() system call to put its socket in a passive mode, waiting for incoming connection requests.
+Client Request:
+
+The client initiates a connection by calling the connect() system call, specifying the server's IP address and port number.
+This creates a TCP connection request packet and sends it to the server.
+
+Server Acceptance:
+
+Upon receiving the connection request, the server's operating system places the incoming connection request in a queue.
+The server calls the accept() system call to retrieve the next connection request from the queue. 
+
+Data Transfer:
+With the connection established, both the client and server can send and receive data through 
+their respective sockets using read and write operations.
+
+Connection Termination:
+Either the client or server can initiate the connection termination process by sending a TCP segment with the FIN flag set.
+Upon receiving the FIN segment, the receiving party acknowledges it and sends its own FIN segment.
+After both sides have sent and received FIN segments, the connection is closed.
+This creates a new socket for the client-server communication, while the original socket remains listening for additional connection requests
+
+
+2.After the creation of the socket, the bind function binds the socket to the address and port number specified in addr(custom data structure).
+
+
+3.A datagram socket is a type of communication endpoint in computer networking that provides a connectionless, unreliable mode of data transmission. Unlike stream sockets, 
+which offer reliable, ordered delivery of data (e.g., TCP), datagram sockets (e.g., UDP) send packets of data called datagrams without establishing a formal connection. 
+Datagram sockets are commonly used for applications where speed and efficiency are prioritized over
+ reliability, such as real-time multimedia streaming, online gaming, and DNS queries
+
+
